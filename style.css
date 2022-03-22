@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root{
+    --red:#E50914;
+    --white:#ffff;
+    --text:#e5e5e5;
+}
+
+html{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    min-height: 200vh;
+}
+
+body{
+    background-color: #141414;
+}
+
+/*-- BASE END --*/
+
+video.main-video{
+    width: 100%;
+}
+
+.menu .logo a{
+    color: var(--red);
+    font-weight: 700;
+    font-size: 1.3rem;  
+}
+
+nav a{
+    display: block;
+    color: var(--text);
+    text-decoration: none;
+    padding: 1.25rem .5rem;
+    white-space: nowrap;
+    transition: color .3s ease;
+}
+
+nav ul li:first-child a{
+    color: var(--white);
+}
+
+nav ul li:not(:first-child) a:hover{
+    color:#B3B3B3;
+    transition: color .3s ease;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-image: linear-gradient(rgba(20,20,20,1),rgba(20,20,20,0));
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav .menu{
+    display: flex;
+    align-items: center;
+    margin: 0 3rem;
+}
+
+nav .browse{
+    display: flex;
+}
+
+nav .browse img{
+    display: none;
+}
+
+/*-- HEADER END --*/
+
