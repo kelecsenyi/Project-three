@@ -16,7 +16,7 @@
 html{
     font-family: 'Roboto',sans-serif;
     font-size: 16px;
-    min-height: 200vh;
+    min-height: 100vh;
 }
 
 body{
@@ -164,7 +164,7 @@ main .row{
 }
 
 main .row h2{
-    margin: 0 0 1rem 0;
+    margin: 1rem 0 1rem 0;
 }
 
 main .row .films{
@@ -173,6 +173,7 @@ main .row .films{
     overflow-y: hidden;
     padding: 1rem 1rem 1rem 0;
     align-items: center;
+    scroll-behavior: smooth;
 }
 
 main .films::-webkit-scrollbar{
@@ -195,6 +196,14 @@ main .films img:hover{
     transition: transform .4s;
 }
 
+main .row .films .forward{
+    height: 10vh;
+    opacity: .9;
+    position: absolute;
+    right: 1%;
+    z-index: 1;
+}
+
 /*-- Main End --*/
 
 footer{
@@ -213,7 +222,7 @@ footer p{
 
 /*-- Footer End --*/
 
-@media (max-width:900px) and (min-width:550px){
+@media (max-width:1000px) and (min-width:550px){
     .browse ul{
         display: none;
     }
@@ -239,6 +248,78 @@ footer p{
     }
 }
 
+@media (max-width:1000px){
+    main{
+        position: static;
+        margin-top: 1rem;
+    }
+    header .buttons{
+        width: 90vw;
+        top: 4rem;
+    }
+    main .row .films img{
+        max-width: 30vw;
+    }
+}
+
 @media (max-width:550px){
-    
+    nav{
+        flex-flow: column-reverse;
+        position: static;
+        top: 0;
+    }
+    nav .menu .logo{
+        display: none;
+    }
+
+    header .buttons{
+        position:absolute;
+        top: 65%;
+        max-width: 80%;
+    }
+    .buttons .playinfo button{
+        font-size: 1rem;
+        margin: .5rem .5rem 0 0;
+     }
+     .buttons h2,.buttons p{
+        display: none;
+     }
+
+    nav .browse ul{
+        display: block;
+        text-align: center;
+    }
+    nav .browse a{
+        padding: .5rem;
+    }
+    nav .browse{
+        padding-bottom: 1rem;
+    }
+    main{
+        margin-left: 1rem;
+    }
+    main .films {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main .row .films img{
+        max-width: 75vw;
+        margin-bottom: 3rem;
+    }
+
+    footer{
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .col{
+        text-align: center;
+    }
+    footer p{
+        margin:.5rem 1rem;
+    }
+    .forward{
+        display: none;
+    }
+
 }
