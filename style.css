@@ -130,25 +130,25 @@ video.main-video{
     gap: 10px;
     transition: opacity .3s;
     white-space: nowrap;
- }
+}
 
- .buttons .playinfo button:hover{
+.buttons .playinfo button:hover{
     opacity: .8;
     transition: opacity .3s;
- }
+}
 
- .buttons .playinfo button:active{
-   outline: 2px double var(--white);
- }
- 
- .buttons .playinfo button img{
+.buttons .playinfo button:active{
+    outline: 2px double var(--white);
+}
+
+.buttons .playinfo button img{
     width: 2.5rem;
     display: block;
- }
- .buttons .playinfo button:not(:first-child){
-   color: var(--white);
+}
+.buttons .playinfo button:not(:first-child){
+    color: var(--white);
     background: rgba(102,105,104,0.6);
- }
+}
 /*-- HEADER END --*/
 
 main{
@@ -201,6 +201,14 @@ main .row .films .forward{
     opacity: .9;
     position: absolute;
     right: 1%;
+    z-index: 1;
+}
+
+main .row .films .backward{
+    height: 10vh;
+    opacity: .9;
+    position: absolute;
+    left: 1%;
     z-index: 1;
 }
 
@@ -260,6 +268,9 @@ footer p{
     main .row .films img{
         max-width: 30vw;
     }
+    .buttons .playinfo button img {
+        width: 2rem;
+    }
 }
 
 @media (max-width:550px){
@@ -280,10 +291,10 @@ footer p{
     .buttons .playinfo button{
         font-size: 1rem;
         margin: .5rem .5rem 0 0;
-     }
-     .buttons h2,.buttons p{
+    }
+    .buttons h2,.buttons p{
         display: none;
-     }
+    }
 
     nav .browse ul{
         display: block;
