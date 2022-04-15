@@ -317,6 +317,12 @@ footer p{
         max-width: 75vw;
         margin-bottom: 3rem;
     }
+    main .row .films .forward{
+        display: none;
+    }
+    main .row .films .backward {
+        display:none;
+    }
 
     footer{
         flex-flow: column;
@@ -329,8 +335,4 @@ footer p{
     footer p{
         margin:.5rem 1rem;
     }
-    .forward{
-        display: none;
-    }
-
 }
